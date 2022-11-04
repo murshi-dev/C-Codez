@@ -1,0 +1,19 @@
+Summary Functions
+
+function prototype
+function heading
+function body
+function definition=function heading+function body
+
+value returning functions
+void returning functions
+
+passing parameters by  value
+passing parameters by  reference
+
+scope of an identifier
+
+function overloading
+recursive functions
+inline functions
+predefined functions

@@ -1,0 +1,69 @@
+Quiz 1
+i.
+double hypotenuse(double side1,double side2)
+ii.
+int smallest(int x, int y, int z)
+iii.
+void instructions( )
+iv.
+double intToDouble(int number)
+v.
+bool checkAge(int age)
+
+Quiz 2
+1. function call
+displayTaxes(federalTax,localTax);
+
+
+2. function header
+void displayTaxes(double fedTax, double stateTax)
+
+Quiz 3
+
+1. a
+2. a
+
+Quiz 4
+1.function call
+calcTaxes(gross,&fedTax,&stateTax);
+
+2. function header
+void calcTaxes(double gross,double &fedTax,double &statetax)
+
+3. function prototype
+void calcTaxes(double,&double,&double);
+
+
+Quiz 5
+Function definition
+void getAge(int &years)
+{
+cout<<"Enter the years";
+cin>>years;
+}
+void displayAge(int years)
+{
+cout<<"Age is"<<years;
+}
+
+Function call
+getAge(&years);
+displayAge(years);
+
+
+Quiz 7
+a. return keyword is missing
+b. function definition does not end with semicolon
+
+
+
+
+
+
+
+
+
+
+
+
+
