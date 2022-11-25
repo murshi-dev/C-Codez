@@ -1,23 +1,27 @@
-#include "Employee.h"
+//TestEmployee.cpp
+//has main function here
+//create objects and call all the setter and getter methods
 #include <iostream>
 using namespace std;
-void main()
+#include "Employee.h"
+int main()
 {
-	Employee obj1;
-	cout<<"Enter Employee ID: "<<endl;
-	int empid;
-	cin>>empid;
-	obj1.setEmpNum(empid);//set the entered value to empid
+	//create local variables
+	int e = 0;
+	double c = 0.0;
+	//prompt user to enter input and accept the input
+	cout << "Enter Employee number: ";
+	cin >> e;
+	cout << "Enter Employee compensation: ";
+	cin >> c;
 
-	cout<<"Enter Employee Compensation: "<<endl;
-	double empcomp;
-	cin>>empcomp;
-	obj1.setEmpComp(empcomp);
-
-	//display values
-	cout<<"Entered data: "<<endl;
-	cout<<"Employee ID: "<<obj1.getEmpNum()<<endl;
-	cout<<"Employee Compensation: "<<obj1.getEmpComp()<<endl;
-
-	system("pause");
+	//create object for Employee class
+	Employee e1;//e1 is an object name 
+	//using e1 call the setter method to assign values to empNum and empComp
+	e1.setEmpNum(e);
+	e1.setEmpComp(c);
+	//using the same e1 call the getter methods to display the entered values
+	cout << "Employee Number: " << e1.getEmpNum() << endl;
+	cout << "Employee Compensation: " << e1.getEmpComp() << endl;
+	return 0;
 }
