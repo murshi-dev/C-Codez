@@ -1,22 +1,15 @@
-//Write a C++ code to display the amount to be paid after 
-//sales tax due on a purchase.Sales tax is 6 %
-
+//Write a C++ code display the amount to be paid after sales tax due on a purchase.Sales tax is 6 % .
 #include<iostream>
 using namespace std;
-void main()
+int main()
 {
-	//declare required variables 
-	double price = 0.0, amountToPay = 0.0;
-	//since tax is a fixed value, declare it as a constant
-	const double SALES_TAX = 0.06;
-	//prompt user input
-	cout << "Enter the price of an item" << endl;
-	//accept user input
+	double price = 0.0, toPay = 0.0;
+	//since the sales tax value is fixed as 6% it can declared as a Constant
+	//constant-value does not change
+	const double tax = 0.06;
+	cout << "Enter the price of the item: ";
 	cin >> price;
-	//calculate
-	amountToPay = price + (price * SALES_TAX);
-	//display result
-	cout << "Amount to pay for " << price << " is " << amountToPay << endl;
-
-	system("pause");
+	toPay = price + (price * tax);
+	cout << "Total Due: " << toPay;
+	return 0;
 }

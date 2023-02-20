@@ -1,27 +1,13 @@
-/*The manager of the Lakeview Hotel wants a program that calculates 
-and displays a guest’s total bill. Each guest pays a room charge that 
-is based on a per-night rate. For example, if the per-night rate 
-is RM100 and the guest stays two nights, the room charge is RM200. 
-Customers also may have to pay a one-time room service charge 
-and a one-time telephone charge. Write a C++ code to calculate and 
-display a guest’s total bill.
-*/
+//Sarah is getting a raise rate of 5% to her weekly pay from next week. Write a C++ code to display the expected weekly pay for next week.
 #include<iostream>
 using namespace std;
-void main()
+int main()
 {
-	int numberOfNights = 0, amountToPay = 0;
-	const int ROOMCHARGE = 250;
-	const int SERVICECHARGE = 100;
-	const int TELCHARGE = 50;
-
-	cout << "Enter the number of nights stay" << endl;
-	cin >> numberOfNights;
-
-	amountToPay = (numberOfNights * ROOMCHARGE) + SERVICECHARGE + TELCHARGE;
-
-	cout << "Amount Payable is " << amountToPay;
-
-
-	system("pause");
+	double weeklyPay = 0.0, newPay = 0.0;
+	const double rate = 0.05;
+	cout << "Enter the weekly pay: ";
+	cin >> weeklyPay;
+	newPay = weeklyPay + (weeklyPay * rate);
+	cout << "New Pay: " << newPay;
+	return 0;
 }

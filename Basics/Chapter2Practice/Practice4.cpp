@@ -1,26 +1,15 @@
-//Write a C++ code to find the area of a rectangle.
-//input-two-length,width
-//output-one--area
+/*Write a C++ code to find the average temperature.
+Prompt for the maximum and minimum temperature and then do the calculation.*/
 #include<iostream>
 using namespace std;
-void main()
+int main()
 {
-	//declare variables length,width,area
-	//and initialise them with 0
-	double length = 0.0, width = 0.0, area = 0.0;
-	//prompt user to enter the length
-	cout << "Enter the length" << endl;//endl - end line
-	//endl moves cursor to next line
-	//accept length
-	cin >> length;
-	//prompt user to enter the width
-	cout << "Enter the width" << endl;
-	//accept width
-	cin >> width;
-	//calculate area
-	area = length * width;
-	//display area
-	cout << "Area is " << area;
-	cout << "Area of rectangle with length " << length << " and width " << width << "is " << area;
-	system("pause");
+	double max = 0.0, min = 0.0, average = 0.0;
+	cout << "Enter the maximum temperature: ";
+	cin >> max;
+	cout << "Enter the minimum temperature: ";
+	cin >> min;
+	average = (max + min) / 2;
+	cout << "Average is: " << average;
+	return 0;
 }
