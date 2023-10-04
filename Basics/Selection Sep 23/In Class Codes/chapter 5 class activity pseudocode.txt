@@ -1,0 +1,74 @@
+chapter 5
+class activity 
+1.
+
+BEGIN
+	set counter = 1
+	while (counter <= 5)
+		prompt 'enter two numbers'
+		input n1,n2
+		if(n1<0 || n2<0) then
+		   output 'positive numbers only'
+		else if(n1==n2) then
+			output 'same numbers entered'
+                     else if(n1>n2) then
+			     output 'n1 is greater'
+                          else
+			     output 'n2 is greater'	
+		          end if
+                     end if  
+                end if
+        counter = counter +1
+        end while
+END
+
+
+2.
+
+BEGIN
+	set option = 'y'
+	while (option == 'y')
+		prompt 'input a number'
+		input number
+		cube=number * number * number
+		output cube
+	prompt 'continue (y/n)'
+	input option
+END
+
+3.
+
+BEGIN
+	prompt 'enter a number'
+	input number
+	for(counter=1;counter<=10;counter++)
+		output counter * number
+        end for
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
