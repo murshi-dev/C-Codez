@@ -1,0 +1,146 @@
+Product.h:
+#pragma once
+#include<string>
+using namespace std;
+class Product
+{
+protected:
+	int barcode;
+	string productName;
+public:
+	Product();
+	void setBarcode(int b);
+	void setProductName( string n);
+	int getBarcode();
+	string getProductName();
+};
+
+Product.cpp:
+#include"Product.h"
+Product::Product()
+{
+	barcode=0;
+	productName = "";
+}
+void Product::setBarcode(int b)
+{
+	barcode=b;
+}
+void Product::setProductName(string n)
+{
+	productName=n;
+}
+int Product::getBarcode()
+{
+	return barcode;
+}
+string Product::getProductName()
+{
+	return productName;
+}
+
+PackageFood.h :
+#include "Product.h"
+#include<string>
+using namespace std;
+class PackagedFood:public Product
+{
+private:
+	double pricePerPack;
+public:
+	PackagedFood();
+	void setPricePerPack(double pricePack);
+	double getPricePerPack();
+};
+PackageFood.cpp:
+#include"PackagedFood.h"
+PackagedFood::PackagedFood()
+{
+	pricePerPack = 0.0;
+}
+void PackagedFood::setPricePerPack(double pricePack)
+{
+	pricePerPack = pricePack;
+}
+double PackagedFood::getPricePerPack()
+{
+	return pricePerPack;
+}
+
+WeighedFood.h :
+#include"Product.h"
+#include<string>
+using namespace std;
+class WeighedFood :public Product
+{
+private:
+	double itemWeight, pricePerKilo;
+public:
+	WeighedFood();
+	void setItemWeight(double w);
+	void setPricePerKilo(double priceKg);
+	double getItemWeight();
+	double getPricePerKilo();
+	double calPrice();
+};
+
+WeighedFood.cpp :
+#include"WeighedFood.h"
+WeighedFood::WeighedFood()
+{
+	itemWeight=0.0;
+	pricePerKilo = 0.0;
+}
+void WeighedFood::setItemWeight(double w)
+{
+	itemWeight= w;
+}
+void WeighedFood::setPricePerKilo(double priceKg)
+{
+	pricePerKilo = priceKg;
+}
+double WeighedFood:: getItemWeight()
+{
+	return itemWeight;
+}
+double WeighedFood::getPricePerKilo()
+{
+	return pricePerKilo;
+}
+double WeighedFood::calPrice()
+{
+	return itemWeight * pricePerKilo;
+}
+
+TestProduct.cpp :
+#include<iostream>
+using namespace std;
+int main()
+{
+	int barcode = 0;
+	string productName= "";
+	double pricePack = 0.0, w = 0.0, priceKg = 0.0, price = 0.0;
+	
+	cout << "Input the barcode:";
+	cin >> barcode;
+	cout << "Input the product name:";
+	cin >> productName;
+	
+	PackagedFood packFood1;
+	cout << "Input the packaged food price:RM";
+	cin >> pricePack;
+	packFood1.setPricePerPack(pricePack);
+	cout << "Packaged Food sold by: RM" << packFood1.getPricePerPack() << endl;
+
+	WeighedFood w1;
+	cout << "Input the weight of the item:";
+	cin >> w;
+	cout << "Input the price per kilo: RM";
+	cin >> priceKg;
+	w1.setItemWeight(w);
+	w1.setPricePerKilo(priceKg);
+	cout << "Weight of the item:" << w1.getItemWeight() << "kg"<<endl;
+	cout << "Price per Kilo:RM" << w1.getPricePerKilo() << endl;
+	cout << "Price for Weighed Food item: RM"<< w1.calPrice() << endl;
+	return 0;
+}
